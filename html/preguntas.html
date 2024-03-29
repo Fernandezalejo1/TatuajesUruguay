@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Tatuajes Increíbles Uruguay</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description"
+        content="Encuentra respuestas a las preguntas frecuentes sobre tatuajes, cuidados posteriores y más.">
+</head>
+
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="../index.html" class="nav-link home">Inicio</a>
+            <ul class="nav-list">
+                <li><a href="./proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="./preguntas.html" class="nav-link">Preguntas</a></li>
+                <li><a href="./noticias.html" class="nav-link">Noticias</a></li>
+                <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="preguntas">
+            <h1>Preguntas Frecuentes</h1>
+            <div class="pregunta" onclick="toggleRespuesta('respuesta1')">
+                <h2>¿Cuánto tiempo tarda en sanar un tatuaje?</h2>
+                <p id="respuesta1" class="respuesta" style="display:none;">El tiempo de sanación puede variar, pero
+                    generalmente toma entre 2 a 4 semanas para la sanación superficial y hasta 6 meses para la completa
+                    sanación de las capas más profundas de la piel.</p>
+            </div>
+            <!-- Pregunta 2 -->
+            <div class="pregunta" onclick="toggleRespuesta('respuesta2')">
+                <h2>¿Es doloroso hacerse un tatuaje?</h2>
+                <p id="respuesta2" class="respuesta" style="display:none;">El nivel de dolor varía según la ubicación
+                    del tatuaje y la tolerancia al dolor de cada persona. Áreas con más tejido adiposo tienden a ser
+                    menos dolorosas.</p>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="pregunta" onclick="toggleRespuesta('respuesta3')">
+                <h2>¿Cómo debo cuidar mi nuevo tatuaje?</h2>
+                <p id="respuesta3" class="respuesta" style="display:none;">Es crucial seguir las indicaciones de tu
+                    tatuador, que generalmente incluyen mantener el área limpia, aplicar pomada antibiótica, y evitar la
+                    exposición al sol.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Email: contacto@tatuajesincreibles.uy</p>
+                <p>Teléfono: +598 99 999 999</p>
+            </div>
+            <div class="social-media">
+                <h3>Síguenos</h3>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <img src="../images/icono/fb.png" alt="Facebook">
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="../images/icono/ig.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <img src="../images/icono/tw.png" alt="Twitter">
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para alternar la visibilidad de las respuestas
+        function toggleRespuesta(id) {
+            var elemento = document.getElementById(id);
+            if (elemento.style.display === "none") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

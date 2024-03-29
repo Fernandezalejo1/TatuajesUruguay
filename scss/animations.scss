@@ -1,0 +1,40 @@
+
+button {
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+.artista-tarjeta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.artista-tarjeta {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.artista-tarjeta img {
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: rotate(-5deg);
+    }
+}

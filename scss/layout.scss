@@ -1,0 +1,145 @@
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    /* Esto separará el enlace de Inicio del resto */
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav .nav-link {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .nav-link:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav .nav-link.home {
+    margin-right: auto;
+    /* Asegura que el enlace de Inicio esté a la derecha */
+}
+
+.nav-list {
+    list-style-type: none;
+    /* Elimina los puntos de la lista */
+    display: flex;
+    /* Alinea los elementos de la lista horizontalmente */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    float: left;
+}
+
+.nav-list li a {
+    display: block;
+}
+
+
+footer {
+    background-color: #333;
+    /* Color de fondo oscuro */
+    color: #ffffff;
+    /* Texto en blanco para contraste */
+    padding: 20px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centra el texto */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    /* Distribuye el contenido a lo largo */
+    align-items: center;
+    /* Alinea verticalmente */
+    flex-wrap: wrap;
+    /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.contact-info,
+.social-media {
+    margin: 10px;
+    /* Margen alrededor de los bloques de contenido */
+}
+
+.social-media a {
+    display: inline-block;
+    /* Muestra los enlaces de redes sociales en línea */
+    margin: 0 5px;
+    /* Espacio entre los iconos de redes sociales */
+}
+
+.social-media img {
+    width: 40px;
+    /* Tamaño de los iconos de redes sociales */
+    height: auto;
+    /* Mantiene la proporción de los iconos */
+}
+
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+
+    .formulario-contacto,
+    .agendar-cita {
+        flex-basis: 48%; // Ajusta el ancho de cada tarjeta en pantallas grandes
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave para destacar
+        padding: 20px;
+        margin: 10px 0; // Espacio alrededor de las tarjetas
+        background-color: #ffffff; // Fondo claro para contraste
+
+        h2 {
+            color: $primary-color; // Usa el color primario definido para los títulos
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input[type="text"],
+            input[type="email"],
+            input[type="date"],
+            input[type="time"],
+            textarea {
+                margin: 10px 0;
+                padding: 10px;
+                border: 1px solid #ccc; // Borde sutil
+                border-radius: 5px; // Bordes redondeados
+
+                &:focus {
+                    border-color: $primary-color; // Resalta el borde al enfocar
+                    outline: none; // Elimina el contorno predeterminado
+                }
+            }
+
+            button {
+                background-color: $primary-color; // Fondo del botón con color primario
+                color: #ffffff; // Texto blanco para contraste
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px; // Bordes redondeados para el botón
+                cursor: pointer; // Indica que es clickeable
+                margin-top: 10px;
+
+                &:hover {
+                    background-color: darken($primary-color, 10%); // Oscurece el botón al pasar el mouse
+                }
+            }
+        }
+    }
+}
+

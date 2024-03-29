@@ -1,0 +1,479 @@
+@charset "UTF-8";
+body {
+  font-family: "Roboto", sans-serif;
+  color: #3498db;
+}
+
+/* Media query para dispositivos de hasta 350px de ancho */
+@media (max-width: 350px) {
+  .topnav {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .topnav .nav-link.home,
+  .nav-list li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .nav-list {
+    display: block;
+  }
+  .nav-list li {
+    margin: 5px 0;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  body {
+    font-size: 1.2rem;
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 901px) {
+  body {
+    font-size: 1.5rem;
+  }
+  main {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+@media (max-width: 768px) {
+  .galeria-proyectos {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .noticia {
+    width: 90%;
+  }
+  .contacto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacto-container .formulario-contacto,
+  .contacto-container .agendar-cita {
+    flex-basis: 90%;
+  }
+}
+.artistas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.artista-tarjeta {
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+.artista-tarjeta img {
+  width: 100%;
+  height: auto;
+}
+.artista-tarjeta h3 {
+  margin-top: 15px;
+}
+.artista-tarjeta p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+main {
+  padding-top: 60px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.galeria-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* O usa 'center' si prefieres */
+  gap: 20px;
+  /* Espacio entre los elementos */
+}
+
+.galeria-item {
+  flex-basis: calc(33.333% - 20px);
+  /* Ajusta el ancho de cada 'item' */
+  display: flex;
+  justify-content: center;
+  /* Centra la imagen dentro del 'item' */
+  align-items: center;
+  /* Centra verticalmente si es necesario */
+}
+
+.galeria-item img {
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.galeria-item img:hover {
+  transform: scale(1.1);
+}
+
+#estudios iframe {
+  width: 100%;
+  max-width: 600px;
+  /* Ajusta este valor según tus necesidades */
+  height: 450px;
+  border: none;
+  /* Elimina el borde del iframe */
+  margin-bottom: 20px;
+  /* Espacio debajo del mapa */
+}
+
+body {
+  background-color: #2c3e50;
+  /* Un tono de gris oscuro */
+  color: #ffffff;
+  /* Cambia el color del texto a blanco para contraste */
+  font-family: "Roboto", sans-serif;
+  /* Ejemplo de fuente para mejor legibilidad */
+}
+
+#noticias {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+}
+#noticias h1 {
+  text-align: center;
+  color: #3498db;
+}
+#noticias .noticias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+#noticias .noticia {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+#noticias .noticia h2 {
+  color: #2ecc71;
+  font-size: 1.2rem;
+}
+#noticias .noticia .fecha {
+  color: #999;
+  font-size: 0.9rem;
+}
+#noticias .noticia p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#noticias .noticia a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+}
+#noticias .noticia a:hover {
+  text-decoration: underline;
+}
+
+.tatuador-seccion {
+  margin-bottom: 40px;
+}
+.tatuador-seccion h2 {
+  margin-bottom: 20px;
+}
+.tatuador-seccion .galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#proyectos .tatuador-seccion {
+  margin-bottom: 40px;
+}
+#proyectos .tatuador-seccion h2 {
+  margin-bottom: 20px;
+}
+#proyectos .galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+#proyectos .galeria-proyectos .proyecto {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#proyectos .galeria-proyectos .proyecto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#proyectos .galeria-proyectos .proyecto h3,
+#proyectos .galeria-proyectos .proyecto p {
+  padding: 0 10px;
+}
+#proyectos .galeria-proyectos .proyecto h3 {
+  margin-top: 15px;
+}
+#proyectos .galeria-proyectos .proyecto p {
+  margin-bottom: 15px;
+}
+
+.noticias-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noticia {
+  width: 80%;
+  max-width: 800px; /* Ajusta esto según tus necesidades */
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.noticia img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Añade un ligero borde redondeado a las imágenes */
+}
+
+.noticia p, .noticia h2 {
+  text-align: justify;
+  margin: 10px 0;
+  font-size: 16px; /* Tamaño de fuente adecuado */
+  line-height: 1.6; /* Espaciado entre líneas para mejorar legibilidad */
+  text-align: left; /* Alineación a la izquierda para evitar espaciado irregular */
+  color: #333; /* Color oscuro para texto sobre fondo claro */
+  margin-bottom: 15px; /* Espacio adicional al final del párrafo */
+}
+
+.noticia a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007bff; /* Ajusta el color según tu esquema de diseño */
+  text-decoration: none;
+}
+
+.noticia a:hover {
+  text-decoration: underline;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  /* Esto separará el enlace de Inicio del resto */
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.topnav .nav-link {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .nav-link:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .nav-link.home {
+  margin-right: auto;
+  /* Asegura que el enlace de Inicio esté a la derecha */
+}
+
+.nav-list {
+  list-style-type: none;
+  /* Elimina los puntos de la lista */
+  display: flex;
+  /* Alinea los elementos de la lista horizontalmente */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  float: left;
+}
+
+.nav-list li a {
+  display: block;
+}
+
+footer {
+  background-color: #333;
+  /* Color de fondo oscuro */
+  color: #ffffff;
+  /* Texto en blanco para contraste */
+  padding: 20px;
+  /* Espaciado interno */
+  text-align: center;
+  /* Centra el texto */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  /* Distribuye el contenido a lo largo */
+  align-items: center;
+  /* Alinea verticalmente */
+  flex-wrap: wrap;
+  /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.contact-info,
+.social-media {
+  margin: 10px;
+  /* Margen alrededor de los bloques de contenido */
+}
+
+.social-media a {
+  display: inline-block;
+  /* Muestra los enlaces de redes sociales en línea */
+  margin: 0 5px;
+  /* Espacio entre los iconos de redes sociales */
+}
+
+.social-media img {
+  width: 40px;
+  /* Tamaño de los iconos de redes sociales */
+  height: auto;
+  /* Mantiene la proporción de los iconos */
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.contacto-container .formulario-contacto,
+.contacto-container .agendar-cita {
+  flex-basis: 48%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #ffffff;
+}
+.contacto-container .formulario-contacto h2,
+.contacto-container .agendar-cita h2 {
+  color: #3498db;
+}
+.contacto-container .formulario-contacto form,
+.contacto-container .agendar-cita form {
+  display: flex;
+  flex-direction: column;
+}
+.contacto-container .formulario-contacto form input[type=text],
+.contacto-container .formulario-contacto form input[type=email],
+.contacto-container .formulario-contacto form input[type=date],
+.contacto-container .formulario-contacto form input[type=time],
+.contacto-container .formulario-contacto form textarea,
+.contacto-container .agendar-cita form input[type=text],
+.contacto-container .agendar-cita form input[type=email],
+.contacto-container .agendar-cita form input[type=date],
+.contacto-container .agendar-cita form input[type=time],
+.contacto-container .agendar-cita form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contacto-container .formulario-contacto form input[type=text]:focus,
+.contacto-container .formulario-contacto form input[type=email]:focus,
+.contacto-container .formulario-contacto form input[type=date]:focus,
+.contacto-container .formulario-contacto form input[type=time]:focus,
+.contacto-container .formulario-contacto form textarea:focus,
+.contacto-container .agendar-cita form input[type=text]:focus,
+.contacto-container .agendar-cita form input[type=email]:focus,
+.contacto-container .agendar-cita form input[type=date]:focus,
+.contacto-container .agendar-cita form input[type=time]:focus,
+.contacto-container .agendar-cita form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+.contacto-container .formulario-contacto form button,
+.contacto-container .agendar-cita form button {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.contacto-container .formulario-contacto form button:hover,
+.contacto-container .agendar-cita form button:hover {
+  background-color: #217dbb;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #217dbb;
+}
+
+.artista-tarjeta {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.artista-tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.artista-tarjeta {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.artista-tarjeta img {
+  transition: transform 0.2s ease-in-out;
+}
+.artista-tarjeta img:hover {
+  transform: rotate(-5deg);
+}
+
+/*# sourceMappingURL=styles.css.map */

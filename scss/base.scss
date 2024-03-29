@@ -1,0 +1,336 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-family: 'Roboto', sans-serif;
+
+body {
+    font-family: $font-family;
+    color: $primary-color;
+}
+
+
+/* Media query para dispositivos de hasta 350px de ancho */
+@media (max-width: 350px) {
+    .topnav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .topnav .nav-link.home,
+    .nav-list li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-list {
+        display: block;
+    }
+
+    .nav-list li {
+        margin: 5px 0;
+    }
+}
+
+// Media query para tablets
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+// Media query para desktop
+@media (min-width: 901px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}
+
+// Media queries para responsividad
+@media (max-width: 768px) {
+    .galeria-proyectos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .noticia {
+        width: 90%; // Más ancho en pantallas pequeñas
+    }
+    .contacto-container {
+        flex-direction: column;
+        align-items: center;
+
+        .formulario-contacto,
+        .agendar-cita {
+            flex-basis: 90%; // Hace que las tarjetas ocupen más ancho en pantallas pequeñas
+        }
+    }
+}
+
+
+
+.artistas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; // Espacio entre tarjetas
+}
+
+.artista-tarjeta {
+    width: 250px; // Ancho de la tarjeta
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave para destacar las tarjetas
+    text-align: center; // Centra el texto dentro de las tarjetas
+    padding: 20px;
+
+    img {
+        width: 100%; // Asegura que la imagen cubra el ancho de la tarjeta
+        height: auto; // Mantiene la proporción de la imagen
+    }
+
+    h3 {
+        margin-top: 15px; // Espacio entre la imagen y el título
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 0.9rem; // Un tamaño de fuente más pequeño para la descripción
+    }
+}
+
+main {
+    padding-top: 60px; // Ajusta este valor según la altura de tu header para evitar solapamientos
+}
+
+
+section {
+    display: flex;
+    justify-content: center; // Centra horizontalmente
+    align-items: center; // Centra verticalmente
+    text-align: center; // Asegura que el texto dentro esté centrado
+    flex-direction: column; // Organiza el contenido de la sección verticalmente
+    padding: 20px;
+    min-height: 100vh; // Asegura que la sección ocupe al menos el alto de la ventana
+}
+
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* O usa 'center' si prefieres */
+    gap: 20px;
+    /* Espacio entre los elementos */
+}
+
+.galeria-item {
+    flex-basis: calc(33.333% - 20px);
+    /* Ajusta el ancho de cada 'item' */
+    display: flex;
+    justify-content: center;
+    /* Centra la imagen dentro del 'item' */
+    align-items: center;
+    /* Centra verticalmente si es necesario */
+}
+
+
+.galeria-item img {
+    transition: transform 0.3s ease; // Suaviza la transición
+    max-width: 100%; // Asegura que la imagen no exceda el contenedor
+    height: auto; // Mantiene la proporción de las imágenes
+    cursor: pointer; // Cambia el cursor para indicar interactividad
+}
+
+.galeria-item img:hover {
+    transform: scale(1.1); // Aumenta el tamaño de la imagen en un 10%
+}
+
+#estudios iframe {
+    width: 100%;
+    max-width: 600px;
+    /* Ajusta este valor según tus necesidades */
+    height: 450px;
+    border: none;
+    /* Elimina el borde del iframe */
+    margin-bottom: 20px;
+    /* Espacio debajo del mapa */
+}
+
+body {
+    background-color: #2c3e50;
+    /* Un tono de gris oscuro */
+    color: #ffffff;
+    /* Cambia el color del texto a blanco para contraste */
+    font-family: 'Roboto', sans-serif;
+    /* Ejemplo de fuente para mejor legibilidad */
+}
+
+
+#noticias {
+    background-color: #f5f5f5; // Fondo claro para la sección
+    padding: 20px 0;
+
+    h1 {
+        text-align: center;
+        color: $primary-color;
+    }
+
+    .noticias-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; // Espacio entre noticias
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .noticia {
+        background-color: #ffffff; // Fondo de cada noticia
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra suave
+        padding: 15px;
+        width: calc(33.333% - 20px); // Tres noticias por fila
+        margin-bottom: 20px;
+
+        h2 {
+            color: $secondary-color;
+            font-size: 1.2rem;
+        }
+
+        .fecha {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: $primary-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+
+.tatuador-seccion {
+    margin-bottom: 40px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .galeria-proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+}
+
+#proyectos {
+    .tatuador-seccion {
+        margin-bottom: 40px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .galeria-proyectos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-items: center;
+
+        .proyecto {
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover; // Asegura que las imágenes cubran el espacio asignado sin distorsionarse
+            }
+
+            h3,
+            p {
+                padding: 0 10px;
+            }
+
+            h3 {
+                margin-top: 15px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+
+.noticias-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noticia {
+    width: 80%;
+    max-width: 800px; /* Ajusta esto según tus necesidades */
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.noticia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Añade un ligero borde redondeado a las imágenes */
+}
+
+.noticia p, .noticia h2 {
+    text-align: justify;
+    margin: 10px 0;
+        font-size: 16px; /* Tamaño de fuente adecuado */
+        line-height: 1.6; /* Espaciado entre líneas para mejorar legibilidad */
+        text-align: left; /* Alineación a la izquierda para evitar espaciado irregular */
+        color: #333; /* Color oscuro para texto sobre fondo claro */
+        margin-bottom: 15px; /* Espacio adicional al final del párrafo */
+    
+    
+}
+
+.noticia a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff; /* Ajusta el color según tu esquema de diseño */
+    text-decoration: none;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
